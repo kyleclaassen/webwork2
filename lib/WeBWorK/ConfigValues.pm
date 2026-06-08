@@ -929,6 +929,16 @@ sub getConfigValues ($ce) {
 			type  => 'text',
 			width => 30,
 		},
+		'LTI{v1p1}{enable_score_rounding}' => {
+			var  => 'LTI{v1p1}{enable_score_rounding}',
+			doc  => x('Enable score rounding'),
+			doc2 => x(
+				'If true, then score ratios are rounded to two decimal places before passing back the the LMS, '
+					. 'e.g. "5 out of 6" is sent to the LMS as "0.83". (This is the historical behavior of WeBWorK.) '
+					. 'If false, then no rounding is performed.'
+			),
+			type => 'boolean'
+		},
 		external_auth => {
 			var  => 'external_auth',
 			doc  => x('Require users to log in through the LMS'),

@@ -232,6 +232,7 @@ $LTIMassUpdateInterval = 86400;
 	#'LTI{v1p3}{LMS_name}',
 	#'LTI{v1p1}{LMS_url}',
 	#'LTI{v1p3}{LMS_url}',
+	#'LTI{v1p1}{enable_score_rounding}',
 	#'external_auth',
 	#'LTIGradeMode',
 	#'LTICheckPrior',
