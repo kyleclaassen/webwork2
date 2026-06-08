@@ -172,7 +172,9 @@ async sub submit_grade ($self, $sourcedid, $score) {
 	my $ce = $c->{ce};
 	my $db = $c->{db};
 
-	$score = wwRound(2, $score);
+	if ($ce->{LTI}{v1p1}{enable_score_rounding} // 1) {
+		$score = wwRound(2, $score);
+	}
 
 	my $request_url = $db->getSettingValue('lis_outcome_service_url');
 	if (!$request_url) {

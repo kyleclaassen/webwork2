@@ -19,6 +19,14 @@ $LTI{v1p1}{LMS_name} = 'the LMS';
 $LTI{v1p1}{LMS_url} = '';
 #$LTI{v1p1}{LMS_url} = 'https://myschool.edu/lms/';
 
+# Enable/disable grade passback score rounding.
+# If 0, then do not round.
+# If 1, then round to two decimal places. E.g. a score of "5 out of 6" would be passed back to
+# the LMS as "0.83".
+# NOTE: For safe backward compatibility, the default value is 1 since WeBWorK has rounded to two
+# decimal places historically.
+# $LTI{v1p1}{enable_score_rounding} = 1;
+
 ################################################################################################
 # LTI 1.1 preferred and fallback source of WW user_id
 ################################################################################################
